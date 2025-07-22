@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Style Quiz</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ 
+
+    
+</head>
+<body>
+  <h2>Learning Style Quiz</h2>
+
+  <div  id="gender_and_age">
+    <label>Gender:</label>
+    <select id="gender">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+    </select><br>
+
+    <label>Age:</label>
+    <input type="number" id="age" min="5" max="99" required>
+  </div>
+
+  <button id="start-btn">Start Quiz</button>
+
+  <div id="question-container" class="hidden">
+    <p id="question-text"></p>
+    <ul id="choices-list"></ul>
+    <button id="next-btn" class="hidden">Next</button>
+  </div>
+
+  <div id="result-container" class="hidden">
+    <h3>Your Responses:</h3>
+    <pre id="score"></pre>
+    <button id="restart-btn">Restart</button>
+  </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

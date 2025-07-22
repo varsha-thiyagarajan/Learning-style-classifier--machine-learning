@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container-result">
+    <h1>Predicted Learning Style</h1>
+    <p>Your learning style is: <strong>{{ learning_style }}</strong>📚😊</p>
+
+    <button onclick="window.location.href='/'">Restart</button>
+  </div>
+</body>
+</html>
