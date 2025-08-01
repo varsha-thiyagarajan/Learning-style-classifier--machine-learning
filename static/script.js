@@ -60,20 +60,17 @@ const genderAgeSection = document.getElementById("gender_and_age");
     nextBtn.classList.add("hidden");
   });
  function startQuiz() {
-  // Hide the Start button
+  
   startBtn.classList.add("hidden");
 
-  // Hide any previous results
+ 
   resultContainer.classList.add("hidden");
 
-  // Show the quiz question container
   questionContainer.classList.remove("hidden");
 
-  // Forcefully hide the gender and age section
+ ``             
   genderAgeSection.classList.add("hidden");
-  genderAgeSection.style.display = "none"; // Ensure it disappears
-
-  // Load the first question
+  genderAgeSection.style.display = "none"; 
   showQuestion();
 }
 
@@ -81,7 +78,6 @@ const genderAgeSection = document.getElementById("gender_and_age");
     nextBtn.classList.add("hidden");
     questionText.textContent = `Q${currentQuestionIndex + 1}: ${questions[currentQuestionIndex]}`;
     choicesList.innerHTML = "";
-
     choices.forEach((choice) => {
       const li = document.createElement("li");
       li.textContent = choice.label;
@@ -90,7 +86,6 @@ const genderAgeSection = document.getElementById("gender_and_age");
       choicesList.appendChild(li);
     });
   }
-
   function selectAnswer(value) {
     userAnswers.push({
       question: questions[currentQuestionIndex],
@@ -102,7 +97,6 @@ const genderAgeSection = document.getElementById("gender_and_age");
   function showResult() {
   questionContainer.classList.add("hidden");
   resultContainer.classList.remove("hidden");
-
   const gender = document.getElementById("gender").value;
   const age = document.getElementById("age").value;
 
@@ -122,7 +116,7 @@ const genderAgeSection = document.getElementById("gender_and_age");
   .then(response => response.json())
   .then(data => {
     if (data.learning_style) {
-      // Redirect to result page with predicted learning style
+      
       window.location.href = `/result/${data.learning_style}`;
     } else {
       scoreDisplay.textContent = 'Error: Could not predict.';

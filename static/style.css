@@ -1,14 +1,13 @@
-/* Reset default browser styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styling */
+
 body {
   font-family: Arial, sans-serif;
-  /*background-color: #1e1e1e;*/
   background-image:url('image.png');
   color: #ffffff;
   display: flex;
@@ -18,7 +17,6 @@ body {
   height: 100vh;
 }
 
-/* Container for general layout */
 .container {
   width: 400px;
   padding: 20px;
@@ -28,7 +26,6 @@ body {
   text-align: center;
 }
 
-/* Container for results */
 .container-result {
   width: 700px;
   padding: 20px;
@@ -38,20 +35,17 @@ body {
   text-align: center;
 }
 
-/* Heading styles */
 h1,
 h2 {
   margin-bottom: 50px;
   font-size: 60px;
 }
 
-/* Paragraphs */
+
 p {
   margin-bottom: 10px;
   font-size: 30px;
 }
-
-/* List styling for choices */
 ul {
   list-style-type: none;
   padding: 0;
@@ -69,8 +63,6 @@ li {
 li:hover {
   background-color: #6200ea;
 }
-
-/* Button styling */
 button {
   padding: 10px;
   background-color: #6200ea;
@@ -84,13 +76,9 @@ button {
 button:hover {
   background-color: #3700b3;
 }
-
-/* Utility class to hide elements */
 .hidden {
   display: none;
 }
-
-/* Gender and Age Section Styling */
 #gender_and_age {
   display: flex;
   flex-direction: column;
@@ -118,8 +106,6 @@ button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-
-/* Question and answer area */
 #question-container {
   display: flex;
   flex-direction: column;
@@ -140,8 +126,6 @@ button:hover {
   justify-content: center;
   border-radius: 20px;
 }
-
-/* Button widths */
 #start-btn,
 #next-btn {
   width: 20%;

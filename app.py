@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load the trained SVM model
+
 model = pickle.load(open('svm_best_model.pkl', 'rb'))
 
 @app.route('/')
@@ -17,21 +17,20 @@ def index():
 def predict():
     try:
         data = request.get_json()
-        gender = int(data['gender'])
-        age = int(data['age'])
+
         responses = data['responses']
-        features = [gender, age] + responses
-        final_input = np.array([features])
+
+        final_input = np.array([responses])
         prediction = model.predict(final_input)[0]
 
         if prediction == 0:
-            label = "Auditory"
+            label = "Visual"
         elif prediction == 1:
             label = "Kinesthetic"
         else:
-            label = "Visual"
+            label = "Auditory"
 
-        # Return the result template with predicted label
+        
         return jsonify({'learning_style': label})
 
     except Exception as e:
